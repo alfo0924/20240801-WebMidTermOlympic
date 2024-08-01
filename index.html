@@ -11,45 +11,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <!--    import jquery-->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+
     <style>
         body{
-            background: rgba(168,168,168,0.8);
+            background: rgba(21, 21, 21, 0.8);
+            flex-grow: 10;
+            font-weight: 500;
+            /*font-size: 30px;*/
+            justify-content: center;
+            align-items: center;
+            align-content: center;
 
 
         }
-
-        .column {
-            width: 170px;
-            float: left;
-            padding-bottom: 100px;
+        .toggler {
+            width: 500px;
+            height: 200px;
         }
-        .portlet {
-            margin: 0 1em 1em 0;
-            padding: 0.3em;
+        #button {
+            padding: .5em 1em;
+            text-decoration: none;
         }
-        .portlet-header {
-            padding: 0.2em 0.3em;
-            margin-bottom: 0.5em;
+        #effect {
             position: relative;
-        }
-        .portlet-toggle {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            margin-top: -8px;
-        }
-        .portlet-content {
+            width: 240px;
+            height: 170px;
             padding: 0.4em;
         }
-        .portlet-placeholder {
-            border: 1px dotted black;
-            margin: 0 1em 1em 0;
-            height: 50px;
+        #effect h3 {
+            margin: 0;
+            padding: 0.4em;
+            text-align: center;
         }
+        footer{
+            clear: both;
+            margin-top:550px ;
 
+        }
+        .gold{
+            background: gold;
+        }
+        .silver{
+            background: silver;
+        }
+        .copper{
+            background: #813900;
+        }
+        .c22{
 
+            display: inline-block;
+
+            margin: 50px;
+            padding: 50px;
+        }
     </style>
 
 
@@ -107,49 +125,67 @@
 
 
 
+<div class=" c22 container m-5 justify-content-center align-items-center " >
 
-
-
-
-<div class="column">
-
-    <div class="portlet">
-        <div class="portlet-header">Feeds</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-    </div>
-
-    <div class="portlet">
-        <div class="portlet-header">News</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+<div class="container p-5 justify-content-center align-items-center row ">
+    <div class="toggler">
+        <div class="effect" class="ui-widget-content ui-corner-all m-5 p-5 col-3  ">
+            <h3 class="ui-widget-header ui-corner-all">USA</h3>
+            <p class="gold">5
+            </p>
+            <p class="silver">13</p>
+            <p class="copper">12</p>
+        </div>
+        <div class="effect" class="ui-widget-content ui-corner-all m-5 p-5 col-3 ">
+            <h3 class="ui-widget-header ui-corner-all">CHINA</h3>
+            <p class="gold">9
+            </p>
+            <p class="silver">7</p>
+            <p class="copper">3</p>
+        </div>
+        <div class="effect" class="ui-widget-content ui-corner-all m-5 p-5 col-3 ">
+            <h3 class="ui-widget-header ui-corner-all">FRENCH</h3>
+            <p class="gold">8
+            </p>
+            <p class="silver">10</p>
+            <p class="copper">8</p>
+        </div>
+        <div class="effect" class="ui-widget-content ui-corner-all m-5 p-5 col-3 ">
+            <h3 class="ui-widget-header ui-corner-all">JAPAN</h3>
+            <p class="gold">8
+            </p>
+            <p class="silver">3</p>
+            <p class="copper">4</p>
+        </div>
+        <div class="effect" class="ui-widget-content ui-corner-all m-5 p-5 col-3 ">
+            <h3 class="ui-widget-header ui-corner-all">GERMANY</h3>
+            <p class="gold">2
+            </p>
+            <p class="silver">2</p>
+            <p class="copper">2</p>
+        </div>
     </div>
 
 </div>
+    <select name="effects" id="effectTypes">
+        <option value="blind">Blind</option>
+        <option value="bounce">Bounce</option>
+        <option value="clip">Clip</option>
+        <option value="drop">Drop</option>
+        <option value="explode">Explode</option>
+        <option value="fade">Fade</option>
+        <option value="fold">Fold</option>
+        <option value="highlight">Highlight</option>
+        <option value="puff">Puff</option>
+        <option value="pulsate">Pulsate</option>
+        <option value="scale">Scale</option>
+        <option value="shake">Shake</option>
+        <option value="size">Size</option>
+        <option value="slide">Slide</option>
+    </select>
 
-<div class="column">
-
-    <div class="portlet">
-        <div class="portlet-header">Shopping</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-    </div>
-
+    <button id="button" class="ui-state-default ui-corner-all">Show Medals</button>
 </div>
-
-<div class="column">
-
-    <div class="portlet">
-        <div class="portlet-header">Links</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-    </div>
-
-    <div class="portlet">
-        <div class="portlet-header">Images</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-    </div>
-
-</div>
-
-
-
 
 
     <footer class="bg-dark text-center text-white w-100">
@@ -190,28 +226,31 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 <script>
     $( function() {
-        $( ".column" ).sortable({
-            connectWith: ".column",
-            handle: ".portlet-header",
-            cancel: ".portlet-toggle",
-            placeholder: "portlet-placeholder ui-corner-all"
-        });
+        // run the currently selected effect
+        function runEffect() {
+            // get effect type from
+            var selectedEffect = $( "#effectTypes" ).val();
 
-        $( ".portlet" )
-            .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
-            .find( ".portlet-header" )
-            .addClass( "ui-widget-header ui-corner-all" )
-            .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+            // Most effect types need no options passed by default
+            var options = {};
+            // some effects have required parameters
+            if ( selectedEffect === "scale" ) {
+                options = { percent: 50 };
+            } else if ( selectedEffect === "size" ) {
+                options = { to: { width: 200, height: 60 } };
+            }
 
-        $( ".portlet-toggle" ).on( "click", function() {
-            var icon = $( this );
-            icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
-            icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+            // Run the effect
+            $( ".effect" ).toggle( selectedEffect, options, 500 );
+        };
+
+        // Set effect from select menu value
+        $( "#button" ).on( "click", function() {
+            runEffect();
         });
     } );
 </script>
